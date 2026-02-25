@@ -31,6 +31,7 @@ while True:
                                     print("Congratulations! You have been awarded the Full Scholarship.")
                                 elif community_service in ["no", "n"]:
                                     print("Congratulations! You have been awarded the Partial Scholarship.")
+                                    break
                                 else:
                                     print("Invalid input. Please enter yes(n) or no(n)")
                             except ValueError:
