@@ -1,5 +1,7 @@
 '''
-Task:Create a small program that:
+Task:
+
+Create a small program that:
 Asks the user to guess a secret number.
 If the guess is correct → print a success message.
 If the guess is too high → tell them it's too high.
