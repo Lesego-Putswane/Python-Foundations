@@ -15,32 +15,48 @@ If family income is 300000 or more → print that they do not qualify financiall
 If they qualify financially:
 If they completed community service → award Full Scholarship.
 If they did not complete community service → award Partial Scholarship.'''
+print("========== Welcome to the Scholarship Eligibility Checker ==========")
 
+# ask user for their exam score
 while True:
     try:
         exam_score = int(input("Enter your exam score: "))
-        if exam_score >= 75:
-            while True:
-                try:
-                    income = int(input("Enter your family income: "))
-                    if income < 300000:
-                        while True:
-                            try:
-                                community_service = input("Have you ever participated in any community service? yes(y) or no(n)): ").strip().lower()
-                                if community_service in ["yes", "y"]:
-                                    print("Congratulations! You have been awarded the Full Scholarship.")
-                                elif community_service in ["no", "n"]:
-                                    print("Congratulations! You have been awarded the Partial Scholarship.")
-                                    break
-                                else:
-                                    print("Invalid input. Please enter yes(n) or no(n)")
-                            except ValueError:
-                                print("Invalid input! Please enter the correct community service option.")
-                    else:
-                        print("Unfortunately due to your family finances, you do not qualify for the scholarship.")
-                except ValueError:
-                    print("Invalid input! Please enter the correct income.")
+
+        if 0 <= exam_score <= 100:
+            break
         else:
-            print("Unfortunately your exam score is too low, therefore you do not qualify for the scholarship.")
+            print("Your exam score can't be less than 0, or above 100! Please try again.")
     except ValueError:
-        print("Invalid input! Please enter the correct score.")
+        print("Invalid input! Please enter a valid number.")
+
+
+
+
+# while True:
+#     try:
+#         exam_score = int(input("Enter your exam score: "))
+#         if exam_score >= 75:
+#             while True:
+#                 try:
+#                     income = int(input("Enter your family income: "))
+#                     if income < 300000:
+#                         while True:
+#                             try:
+#                                 community_service = input("Have you ever participated in any community service? yes(y) or no(n)): ").strip().lower()
+#                                 if community_service in ["yes", "y"]:
+#                                     print("Congratulations! You have been awarded the Full Scholarship.")
+#                                 elif community_service in ["no", "n"]:
+#                                     print("Congratulations! You have been awarded the Partial Scholarship.")
+#                                     break
+#                                 else:
+#                                     print("Invalid input. Please enter yes(n) or no(n)")
+#                             except ValueError:
+#                                 print("Invalid input! Please enter the correct community service option.")
+#                     else:
+#                         print("Unfortunately due to your family finances, you do not qualify for the scholarship.")
+#                 except ValueError:
+#                     print("Invalid input! Please enter the correct income.")
+#         else:
+#             print("Unfortunately your exam score is too low, therefore you do not qualify for the scholarship.")
+#     except ValueError:
+#         print("Invalid input! Please enter the correct score.")
