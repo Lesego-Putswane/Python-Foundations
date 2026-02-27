@@ -43,6 +43,14 @@ while True:
     else:
         print("Invalid email provided. Enter a valid email that contains '@' and '.'")
 
-phone = 9475862936
+while True:
+    try:
+        phone = input("\nEnter your valid 10 digits phone number: ")
+        if len(phone) == 10:
+            break
+        else:
+            print("Your phone number must contain 10 digits! Please try again.")
+    except ValueError:
+        print("Invalid phone number provided. Please make sure your phone number contains digits only")
 
 print(f"\nRegistration Successful! \nName: {name} \nAge: {age} \nEmail: {email} \nPhone: {phone}")
