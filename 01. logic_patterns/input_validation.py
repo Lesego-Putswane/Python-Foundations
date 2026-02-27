@@ -38,10 +38,17 @@ while True:
 
 while True:
     email = input("\nEnter your email: ").strip().lower()
-    if "@" in email and "." in email:
-        break
+
+    if email.count("@") == 1:
+        at_index = email.index("@")
+
+        if at_index > 0 and at_index < len(email) - 1:
+            domain_part = email[at_index + 1:]
+
+            if "." in domain_part:
+                break
     else:
-        print("Invalid email provided. Enter a valid email that contains '@' and '.'")
+        print("Invalid email. There must be exactly one '@' symbol.")
 
 while True:
     phone = input("\nEnter your valid 10 digits phone number: ")
