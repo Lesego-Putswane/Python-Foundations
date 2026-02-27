@@ -36,8 +36,13 @@ while True:
     except ValueError:
         print("Invalid Input! Please enter a numerical value.")
 
+while True:
+    email = input("\nEnter your email: ").strip().lower()
+    if "@" in email and "." in email:
+        break
+    else:
+        print("Invalid email provided. Enter a valid email that contains '@' and '.'")
 
-email = "le@gmail.com"
 phone = 9475862936
 
 print(f"\nRegistration Successful! \nName: {name} \nAge: {age} \nEmail: {email} \nPhone: {phone}")
