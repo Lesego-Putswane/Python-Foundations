@@ -41,7 +41,7 @@ if age < 16:
     print("Membership registration terminated! You are too young to join the gym.")
 else:
     while True:
-        medical_condition = input("Do you have a medical condition? yes(y) / no(n): ").lower()
+        medical_condition = input("\nDo you have a medical condition? yes(y) / no(n): ").lower()
         if medical_condition in ["yes", "y","no", "n"]:
             break
         else:
@@ -49,46 +49,25 @@ else:
 
     if medical_condition in ["yes", "y"]:
         while True:
-            doctor_approval = input("“Do you have doctor approval?” (yes/no): ").lower()
+            doctor_approval = input("\nDo you have doctor approval? (yes/no): ").lower()
             if doctor_approval in ["yes", "y"]:
                 break
             elif doctor_approval in ["no", "n"]:
                 print("Unfortunately, without a doctors approval we can not continue your registration!")
+                exit()
             else:
                 print("Invalid option! Please enter yes(y) / no(n)")
 
-while True:
-    try:
-        income = int(input("Enter your income: "))
-        if income >= 2000:
-            print("Congratulations. You hae been aproved for the PREMIUM memebership.")
-            break
-        elif income < 2000:
-            print("Congratulations. You hae been aproved for the BASIC memebership.")
-            break
-        else:
-            print("Income can not be less than 0!")
-    except ValueError:
-        print("Invalid input provided! Please enter correct income value above 0")
-
-        # medical_check = input("“Do you have doctor approval?” (yes/no): ").lower()
-        # if medical_check in ["no", "n"]:
-        #     print("Unfortunately, without a doctors approval we can not continue your registration!")
-        #     break
-        # elif medical_check in ["yes", "y"]:
-        #     while True:
-        #         try:
-        #             income = int(input("Enter your income: "))
-                    # if income >= 2000:
-                    #     print("Congratulations. You hae been aproved for the PREMIUM memebership.")
-                    #     break
-                    # elif income < 2000:
-                    #     print("Congratulations. You hae been aproved for the BASIC memebership.")
-                    #     break
-                    # else:
-                    #     print("Income can not be less than 0!")
-        #         except ValueError:
-        #             print("Invalid input provided! Please enter correct income value above 0")
-        # else:
-        #     print("Invalid input! Please enter yes(y) or no(n)")
-        # break
+    while True:
+        try:
+            income = int(input("\nEnter your income: "))
+            if income < 0:
+                print("Income can not be less than 0!")
+            elif income >= 2000:
+                print("Congratulations. You have been aproved for the PREMIUM memebership.")
+                break
+            else:
+                print("Congratulations. You have been aproved for the BASIC memebership.")
+                break
+        except ValueError:
+            print("Invalid input provided! Please enter correct income value above 0")
