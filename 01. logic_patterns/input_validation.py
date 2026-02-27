@@ -20,13 +20,23 @@ Phone: <phone>
 
 print("----------Welcome to user registration----------")
 while True:
-    name = input("Enter your full name: ").strip().title()
+    name = input("\nEnter your full name: ").strip().title()
     if name != "":
         break
     else:
         print("Name can not be empty. Please try again")
 
-age = 4
+while True:
+    try:
+        age = int(input("\nEnter your age: "))
+        if age >= 0:
+            break
+        else:
+            print("Age can not be less than 0. Please try again.")
+    except ValueError:
+        print("Invalid Input! Please enter a numerical value.")
+
+
 email = "le@gmail.com"
 phone = 9475862936
 
