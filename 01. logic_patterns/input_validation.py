@@ -37,19 +37,21 @@ def user_age():
         except ValueError:
             print("Invalid Input! Please enter a numerical value.")
 
-while True:
-    email = input("\nEnter your email: ").strip().lower()
+def user_email():
+    while True:
+        email = input("\nEnter your email: ").strip().lower()
 
-    if email.count("@") == 1:
-        at_index = email.index("@")
+        if email.count("@") == 1:
+            at_index = email.index("@")
 
-        if at_index > 0 and at_index < len(email) - 1:
-            domain_part = email[at_index + 1:]
+            if at_index > 0 and at_index < len(email) - 1:
+                domain_part = email[at_index + 1:]
 
-            if "." in domain_part:
-                break
-    else:
-        print("Invalid email. There must be exactly one '@' symbol.")
+                if "." in domain_part:
+                    break
+        else:
+            print("Invalid email. There must be exactly one '@' symbol.")
+
 
 while True:
     phone = input("\nEnter your valid 10 digits phone number: ")
