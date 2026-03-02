@@ -52,12 +52,11 @@ def user_email():
         else:
             print("Invalid email. There must be exactly one '@' symbol.")
 
-
-while True:
-    phone = input("\nEnter your valid 10 digits phone number: ")
-    if len(phone) == 10 and phone.isdigit():
-        break
-    else:
-        print("Your phone number must contain 10 digits! Please try again.")
+def phone_number():
+    while True:
+        phone = input("\nEnter your valid 10 digits phone number: ")
+        if len(phone) == 10 and phone.isdigit():
+            break
+        else:
+            print("Your phone number must contain 10 digits! Please try again.")
     
-print(f"\nRegistration Successful! \nName: {name} \nAge: {age} \nEmail: {email} \nPhone: {phone}")
