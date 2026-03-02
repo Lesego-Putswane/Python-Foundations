@@ -26,15 +26,16 @@ def username():
         else:
             print("Name can not be empty. Please try again")
 
-while True:
-    try:
-        age = int(input("\nEnter your age: "))
-        if age >= 0:
-            break
-        else:
-            print("Age can not be less than 0. Please try again.")
-    except ValueError:
-        print("Invalid Input! Please enter a numerical value.")
+def user_age():
+    while True:
+        try:
+            age = int(input("\nEnter your age: "))
+            if age >= 0:
+                break
+            else:
+                print("Age can not be less than 0. Please try again.")
+        except ValueError:
+            print("Invalid Input! Please enter a numerical value.")
 
 while True:
     email = input("\nEnter your email: ").strip().lower()
