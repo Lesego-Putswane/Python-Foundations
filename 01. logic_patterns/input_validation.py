@@ -17,14 +17,14 @@ Age: <age>
 Email: <email>
 Phone: <phone>
 '''
-
-print("----------Welcome to user registration----------")
-while True:
-    name = input("\nEnter your full name: ").strip().title()
-    if name != "":
-        break
-    else:
-        print("Name can not be empty. Please try again")
+def username():
+    print("----------Welcome to user registration----------")
+    while True:
+        name = input("\nEnter your full name: ").strip().title()
+        if name != "":
+            break
+        else:
+            print("Name can not be empty. Please try again")
 
 while True:
     try:
