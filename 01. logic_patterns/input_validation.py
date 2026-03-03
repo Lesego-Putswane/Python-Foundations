@@ -60,3 +60,13 @@ def phone_number():
         else:
             print("Your phone number must contain 10 digits! Please try again.")
     
+name = user_name()
+age = user_age()
+email = user_email()
+phone = phone_number()
+
+print("\nRegistration Successful!")
+print(f"Name: {name}")
+print(f"Age: {age}")
+print(f"Email: {email}")
+print(f"Phone: {phone}")
