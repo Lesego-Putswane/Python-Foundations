@@ -17,12 +17,12 @@ Age: <age>
 Email: <email>
 Phone: <phone>
 '''
-def username():
+def user_name():
     print("----------Welcome to user registration----------")
     while True:
         name = input("\nEnter your full name: ").strip().title()
         if name != "":
-            break
+            return name
         else:
             print("Name can not be empty. Please try again")
 
@@ -31,7 +31,7 @@ def user_age():
         try:
             age = int(input("\nEnter your age: "))
             if age >= 0:
-                break
+                return age
             else:
                 print("Age can not be less than 0. Please try again.")
         except ValueError:
@@ -48,7 +48,7 @@ def user_email():
                 domain_part = email[at_index + 1:]
 
                 if "." in domain_part:
-                    break
+                    return email
         else:
             print("Invalid email. There must be exactly one '@' symbol.")
 
@@ -56,7 +56,7 @@ def phone_number():
     while True:
         phone = input("\nEnter your valid 10 digits phone number: ")
         if len(phone) == 10 and phone.isdigit():
-            break
+            return phone
         else:
             print("Your phone number must contain 10 digits! Please try again.")
     
