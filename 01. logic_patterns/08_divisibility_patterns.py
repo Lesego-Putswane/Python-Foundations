@@ -18,19 +18,26 @@ Clean output formatting
 Program Requirements
 '''
 
-user_number = int(input("Enter a number: "))
+while True:
+    try:
+        user_number = int(input("Enter a number: "))
 
-for number in range(1, user_number+1):
-    divisors = []
+        for number in range(1, user_number+1):
+            divisors = []
 
-    if number % 2 == 0:
-        divisors.append("2")
-    if number % 3 == 0:
-        divisors.append("3")
-    if number % 5 == 0:
-        divisors.append("5")
-    
-    if divisors:
-        print(f"{number} divisible by {','.join(divisors)}")
-    else:
-        print(number)
+            if number % 2 == 0:
+                divisors.append("2")
+            if number % 3 == 0:
+                divisors.append("3")
+            if number % 5 == 0:
+                divisors.append("5")
+            # if number % 10 == 0:
+            #     divisors.append("10")   
+
+            if divisors:
+                print(f"{number} divisible by {','.join(divisors)}")
+            else:
+                print(number)
+        break
+    except ValueError:
+        print("Invalid input provided! Please provide digits only.")
