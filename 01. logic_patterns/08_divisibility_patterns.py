@@ -35,8 +35,6 @@ while True:
                 divisors.append("3")
             if number % 5 == 0:
                 divisors.append("5")
-            # if number % 10 == 0:
-            #     divisors.append("10")   
 
             if divisors:
                 print(f"{number} divisible by {','.join(divisors)}")
